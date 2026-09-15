@@ -15,22 +15,24 @@
         }
 
         video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-        }
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: black;
+    cursor: pointer;
+}
     </style>
 </head>
 
 <body>
 
     <video
-        id="motion"
-        src="./Forest_(16.9).mp4"
-        preload="auto"
-        playsinline>
-    </video>
+    id="motion"
+    src="./Forest_(16.9).mp4"
+    preload="metadata"
+    playsinline
+    webkit-playsinline>
+</video>
 
     <script src="./main.js"></script>
 
