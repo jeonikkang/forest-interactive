@@ -1,8 +1,17 @@
 const video = document.getElementById('motion');
 
-window.addEventListener('click', function () {
+video.addEventListener('pointerdown', async function () {
 
-    video.currentTime = 0;
-    video.play();
+    try {
+        video.currentTime = 0;
+        await video.play();
+
+        console.log('영상 재생 성공');
+
+    } catch (error) {
+
+        console.error('영상 재생 실패:', error);
+
+    }
 
 });
